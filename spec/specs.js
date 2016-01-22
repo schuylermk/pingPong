@@ -1,4 +1,8 @@
 describe("pingypongy", function(anyNumber) {
+  it("will change multiples of 15 to 'pingpong'", function () {
+    expect(pingypongy(30)).to.equal("pingpong");
+  });
+
   it("will change any multiple of 5 to 'pong'", function () {
     expect(pingypongy(5)).to.equal("pong");
   });

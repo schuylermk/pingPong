@@ -1,6 +1,8 @@
 var pingypongy = function(anyNumber) {
-  if (anyNumber % 5 === 0) {
-   return "pong";
+  if (anyNumber % 15 === 0) {
+    return "pingpong";
+  } else if (anyNumber % 5 === 0) {
+    return "pong";
   } else if (anyNumber % 3 === 0) {
     return "ping";
   } else {
