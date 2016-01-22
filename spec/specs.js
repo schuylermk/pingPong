@@ -23,9 +23,9 @@ describe("pingQualifiers", function(anyNumber) {
   });
 });
 
-describe("pingypongy", function(anyNumber) {
+describe("pingLoop", function() {
   it("will count/increment by one from zero until reaching chosen endNumber", function() {
-    expect(pingypongy(5)).to.eql([1,2,"ping",4,"pong"]);
+    expect(pingLoop(5)).to.eql([1,2,"ping",4,"pong"]);
     });
 });
 

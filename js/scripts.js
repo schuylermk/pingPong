@@ -1,5 +1,4 @@
 var pingQualifiers = function(anyNumber) {
-  var numberBox = [];
   if (anyNumber < 0) {
     return "Please only enter a positive number.";
   } else if (anyNumber % 1 !== 0) {
@@ -13,9 +12,20 @@ var pingQualifiers = function(anyNumber) {
   } else {
   return anyNumber;
   }
+};
+
+var pingLoop = function(anyNumber) {
+  var numberBox = [];
+  for (var i = 1; i <= anyNumber; i += 1) {
+    numberBox.push(pingQualifiers(i));
+  }
+  return numberBox;
+};
+
+
   // var numberBox += anyNumber;
-  // var numberBox = [];
-}
+
+
 
 // anyNumber < endNumber
 
