@@ -1,7 +1,11 @@
-describe("pingypongy", function() {
-  it("will count/increment by one from zero until reaching chosen endNumber", function() {
-    expect(pingypongy(1, 5)).to.eql([1,2,3,4,5]);
+describe("pingypongy", function(endNumber) {
+  it("returns numbers unchanged if they're not multiples of 3 or 5", function () {
+    expect(pingypongy(1)).to.equal(1);
   });
+  // it("will count/increment by one from zero until reaching chosen endNumber", function() {
+  //   expect(pingypongy(5)).to.eql([1,2,3,4,5]);
+  // });
+
 });
 
 
