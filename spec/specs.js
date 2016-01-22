@@ -1,29 +1,33 @@
-describe("pingypongy", function(anyNumber) {
-  it("will only accept positive integers", function () {
-    expect(pingypongy(0.5)).to.equal("Please enter only a whole, positive number.");
+describe("pingQualifiers", function(anyNumber) {
+  it("will only accept positive numbers", function () {
+    expect(pingQualifiers(-1)).to.equal("Please only enter a positive number.");
+  });
+  it("will only accept integers", function () {
+    expect(pingQualifiers(1.5)).to.equal("Please enter only a whole, positive number.");
   });
 
   it("will change multiples of 15 to 'pingpong'", function () {
-    expect(pingypongy(30)).to.equal("pingpong");
+    expect(pingQualifiers(30)).to.equal("pingpong");
   });
 
   it("will change any multiple of 5 to 'pong'", function () {
-    expect(pingypongy(5)).to.equal("pong");
+    expect(pingQualifiers(5)).to.equal("pong");
   });
 
   it("will change any multiple of 3 to 'ping'", function () {
-    expect(pingypongy(3)).to.equal("ping");
+    expect(pingQualifiers(3)).to.equal("ping");
   });
 
   it("returns numbers unchanged if they're not multiples of 3 or 5", function () {
-    expect(pingypongy(1)).to.equal(1);
+    expect(pingQualifiers(1)).to.equal(1);
   });
-  // it("will count/increment by one from zero until reaching chosen endNumber", function() {
-  //   expect(pingypongy(5)).to.eql([1,2,3,4,5]);
-  // });
-
 });
 
+describe("pingypongy", function(anyNumber) {
+  it("will count/increment by one from zero until reaching chosen endNumber", function() {
+    expect(pingypongy(5)).to.eql([1,2,"ping",4,"pong"]);
+    });
+});
 
 
 

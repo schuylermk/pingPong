@@ -1,5 +1,8 @@
-var pingypongy = function(anyNumber) {
-  if (anyNumber < 1) {
+var pingQualifiers = function(anyNumber) {
+  var numberBox = [];
+  if (anyNumber < 0) {
+    return "Please only enter a positive number.";
+  } else if (anyNumber % 1 !== 0) {
     return "Please enter only a whole, positive number.";
   } else if (anyNumber % 15 === 0) {
     return "pingpong";
