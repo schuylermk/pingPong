@@ -1,6 +1,6 @@
-describe('pingypongy', function(){
-  it("will instruct user to enter a number to count to", function(){
-    expect(pingypongy(1)).to.equal("ping");
+describe("pingypongy", function() {
+  it("will count/increment by one from zero until reaching chosen endNumber", function() {
+    expect(pingypongy(1, 5)).to.eql([1,2,3,4,5]);
   });
 });
 
