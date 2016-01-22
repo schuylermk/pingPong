@@ -1,5 +1,7 @@
 var pingypongy = function(anyNumber) {
-  if (anyNumber % 15 === 0) {
+  if (anyNumber < 1) {
+    return "Please enter only a whole, positive number.";
+  } else if (anyNumber % 15 === 0) {
     return "pingpong";
   } else if (anyNumber % 5 === 0) {
     return "pong";
@@ -8,7 +10,12 @@ var pingypongy = function(anyNumber) {
   } else {
   return anyNumber;
   }
+  // var numberBox += anyNumber;
+  // var numberBox = [];
 }
+
+// anyNumber < endNumber
+
 
 // var allNumbers = [parseInt(anyNumber)];
 // if((anyNumber % 3 !== 0) || (anyNumber % 5 !== 0)) {

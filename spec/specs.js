@@ -1,4 +1,8 @@
 describe("pingypongy", function(anyNumber) {
+  it("will only accept positive integers", function () {
+    expect(pingypongy(0.5)).to.equal("Please enter only a whole, positive number.");
+  });
+
   it("will change multiples of 15 to 'pingpong'", function () {
     expect(pingypongy(30)).to.equal("pingpong");
   });
