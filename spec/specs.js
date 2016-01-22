@@ -1,4 +1,8 @@
-describe("pingypongy", function(endNumber) {
+describe("pingypongy", function(anyNumber) {
+  it("will change any multiple of 3 to 'ping'", function () {
+    expect(pingypongy(3)).to.equal("ping");
+  });
+
   it("returns numbers unchanged if they're not multiples of 3 or 5", function () {
     expect(pingypongy(1)).to.equal(1);
   });

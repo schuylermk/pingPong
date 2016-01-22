@@ -1,12 +1,23 @@
-var pingypongy = function(endNumber) {
-  if((endNumber % 3 !== 0) || (endNumber % 5 !== 0)) {
-  return endNumber;
+var pingypongy = function(anyNumber) {
+   if (anyNumber % 3 === 0) {
+    return "ping";
+  } else {
+  return anyNumber;
   }
-
-  // if (var endnumber < 1) {
-  //   return "Please enter a number that's greater than zero!";
-  // }
 }
+
+// var allNumbers = [parseInt(anyNumber)];
+// if((anyNumber % 3 !== 0) || (anyNumber % 5 !== 0)) {
+//   // allNumbers.push(anyNumber);
+// }
+// return allNumbers;
+
+
+// if (var endnumber < 1) {
+//   return "Please enter a number that's greater than zero!";
+// }
+
+
 //   else {
 //     alert("ok");
 //     var resultArray = [];
@@ -15,9 +26,8 @@ var pingypongy = function(endNumber) {
 //     }
 //     return resultArray;
 //   }
-// };
-
-
+//
+//
 // else if (number > 20,000) {
 //   return "Whoa, whoa, whoa- take it easy... I can do that, but c\'mon- enter a smaller number!"
 // }
