@@ -1,0 +1,11 @@
+img {
+  align-content: stretch;
+  left: 0px;
+  top: -10px;
+  z-index: -1;
+  width: 105%;
+  opacity: 0.3;
+}
+.pongForm {
+  margin: 5% 0 0 10%;
+}

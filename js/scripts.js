@@ -21,3 +21,13 @@ var pingLoop = function(anyNumber) {
   }
   return numberBox;
 };
+
+$(document).ready(function(){
+  $("form").submit(function(event) {
+  var userEntry = $("input#userInput").val();
+  var result = pingLoop(userEntry);
+    $(".output").text(result);
+
+    event.preventDefault();
+  });
+});
