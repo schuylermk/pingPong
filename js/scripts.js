@@ -1,33 +1,23 @@
-var pingQualifiers = function(anyNumber) {
-  if (anyNumber < 0) {
-    return "Please only enter a positive number.";
-  } else if (anyNumber % 1 !== 0) {
-    return "Please enter only a whole, positive number.";
-  } else if (anyNumber % 15 === 0) {
-    return "pingpong";
-  } else if (anyNumber % 5 === 0) {
-    return "pong";
-  } else if (anyNumber % 3 === 0) {
-    return "ping";
-  } else {
-  return anyNumber;
-  }
-};
-
-var pingLoop = function(anyNumber) {
+var pingLoop = function(number) {
   var numberBox = [];
-  for (var i = 1; i <= anyNumber; i += 1) {
-    numberBox.push(pingQualifiers(i));
-  }
-  return numberBox;
+  for (var i = 1; i <= number; i += 1) {
+    if (i % 15 === 0) {
+      numberBox.push("pingpong");
+    } else if (i % 5 === 0) {
+      numberBox.push("pong");
+    } else if (i % 3 === 0) {
+      numberBox.push("ping");
+    } else {
+      numberBox.push(i);
+    }
+  } return numberBox;
 };
-
-$(document).ready(function(){
-  $("form").submit(function(event) {
-  var userEntry = $("input#userInput").val();
-  var result = pingLoop(userEntry);
-    $(".output").text(result);
-
-    event.preventDefault();
-  });
-});
+// $(document).ready(function(){
+//   $("form").submit(function(event) {
+//   var userEntry = $("input#userInput").val();
+//   var result = pingLoop(userEntry);
+//     $(".output").text(result);
+//
+//     event.preventDefault();
+//   });
+// });
