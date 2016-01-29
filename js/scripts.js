@@ -3,7 +3,6 @@ var pingLoop = function(number) {
   for (var i = 1; i <= number; i += 1) {
     if (i % 15 === 0) {
       numberBox.push("pingpong");
-
     } else if (i % 5 === 0) {
       numberBox.push("pong");
     } else if (i % 3 === 0) {
@@ -11,27 +10,18 @@ var pingLoop = function(number) {
     } else {
       numberBox.push(i);
     }
-  } return numberBox;
+  }
+  console.log(numberBox);
+  return numberBox;
 };
+
 $(document).ready(function(){
   $("form").submit(function(event) {
-  var userEntry = $("input#userInput").val();
-
+  var userEntry = parseInt($("input#userInput").val());
   var result = pingLoop(userEntry);
-
-    $(".output").text(result);
-
+  for (var i = 0; i < result.length; i++) {
+    $("#result").append("<li>" + result[i] + "</li>")
+  }
     event.preventDefault();
   });
 });
-
-
-if (ping) {
-  append to ul#ping;
-} else if (pong) {
-  append to ul#pong;
-} else if (pingpong) {
-  append to ul#pingpong;
-} else {
-  append to ul#plainNumbers ;
-}
